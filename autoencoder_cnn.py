@@ -33,6 +33,8 @@ model.add(Reshape((28, 28)))
 
 model.compile(optimizer='adam', loss='mse')
 
+print(model.summary())
+
 model.fit(X_train, X_train,
           epochs=config.epochs,
           validation_data=(X_test, X_test),
